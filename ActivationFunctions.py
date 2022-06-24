@@ -19,10 +19,7 @@ def exp(x):
 # negative, and the input number if it is positive.
 
 def relu(x):
-    if x < 0:
-        return 0
-    else:
-        return x
+    return max(0, x)
 
 # Sigmoid
 # The sigmoid function takes in an input number, and returns a number between 0 and 1.
