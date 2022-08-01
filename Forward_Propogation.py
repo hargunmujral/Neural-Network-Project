@@ -4,11 +4,11 @@
 
 from Matrix_operations import matrix_dot_prod
 
-def forward_propogation(Weight_matrix, Bias_matrix, Input_matrix, sigmoid_function):
+def forward_propogation(Weight_matrix, Bias_matrix, Input_matrix, activation_function):
     '''Input: accepts a weight matrix, a bias matrix, sigmoig function and an input matrix
     Output: returns the output matrix'''
     # Calculate the output of the neural network
     adjustment = matrix_dot_prod(Weight_matrix, Input_matrix) + Bias_matrix
     # apply the sigmoid function to the output matrix
-    output_matrix = sigmoid_function(adjustment)
+    output_matrix = activation_function(adjustment)
     return output_matrix
